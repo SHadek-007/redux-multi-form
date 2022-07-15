@@ -29,13 +29,13 @@ const Form = ({ title = "Title", onGetRoute }) => {
     const errorCopy = { ...error };
     if (target.name === "name") {
       if (target.value.length < 3)
-        errorCopy.name = "name Must be more than 3 chars";
+        errorCopy.name = "Mame Must be more than 3 Chars";
       else errorCopy.name = "";
     }
 
     if (target.name === "age") {
       if (parseInt(target.value) <= 0)
-        errorCopy.age = "age Must be a positive number and greater than zero";
+        errorCopy.age = "Age Must be a positive number and greater than zero";
       else errorCopy.age = "";
     }
 
