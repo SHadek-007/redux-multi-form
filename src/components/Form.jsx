@@ -48,31 +48,26 @@ const Form = ({ title = "Title", onGetRoute }) => {
 
   return (
     <div className="container mx-auto">
-      <form className="flex flex-col items-center">
-        <h1 className="text-3xl my-6">
-          Form - <strong>Page {title}</strong>
+      <form className="flex flex-col items-center ">
+          <div className="border p-5 w-96 border-cyan-300 rounded-md">
+          <h1 className="text-3xl my-6 text-center font-bold">
+          Form -Page {title}
         </h1>
         <div className="form-control w-full max-w-xs">
-          <label className="label">
-            <span className="label-text">Name</span>
-          </label>
           <input
             type="text"
-            placeholder="Type here"
-            className="input input-bordered input-secondary w-full max-w-xs"
+            placeholder="Name"
+            className="input input-bordered border border-cyan-400 w-full max-w-xs outline-0"
             onChange={handleChange}
             name="name"
           />
           {error.name && <Alert error={error.name} />}
         </div>
-        <div className="form-control w-full max-w-xs">
-          <label className="label">
-            <span className="label-text">Age (Number input)</span>
-          </label>
+        <div className="form-control w-full max-w-xs mt-5">
           <input
             type="number"
-            placeholder="Type here"
-            className="input input-bordered input-secondary w-full max-w-xs"
+            placeholder="Age"
+            className="input input-bordered border border-cyan-400 w-full max-w-xs"
             name="age"
             onChange={handleChange}
           />
@@ -84,11 +79,12 @@ const Form = ({ title = "Title", onGetRoute }) => {
             onClick={handleSubmit}
             to={onGetRoute()}
             type="submit"
-            className={`btn btn-success btn-outline btn-wide font-bold text-2xl ${disabled}`}
+            className={`w-full max-w-xs py-3 text-center bg-cyan-700 text-white rounded-lg text-xl ${disabled}`}
           >
             Submit
           </Link>
         </div>
+          </div>
       </form>
     </div>
   );
