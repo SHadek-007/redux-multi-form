@@ -8,8 +8,8 @@ const Form = ({ title = "Title", onGetRoute }) => {
   const dispatch = useDispatch();
   const [data, setData] = useState({ name: "", age: "" });
   const [error, setError] = useState({
-    name: "Input name",
-    age: "Input age",
+    name: "",
+    age: "",
   });
   const [disabled, setDisabled] = useState("btn-disabled");
 
